@@ -1,7 +1,5 @@
 os
 random
-telebot
-whisper
 time
 openai-whisper
 ffmpeg
