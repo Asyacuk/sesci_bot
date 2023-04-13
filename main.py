@@ -45,7 +45,6 @@ def handle_voice(message):
         sent_message = bot.send_message(chat_id=message.chat.id, text=f"İndirme işlemi %{0} tamamlandı.")
         for i in range(1, 101):
             bot.edit_message_text(chat_id=message.chat.id, message_id=sent_message.message_id, text=f"İndirme işlemi %{i} tamamlandı.")
-            time.sleep(2)  # Her bir istek arasına 0 saniye bekleme süresi ekleyin
 
 
 
@@ -54,7 +53,7 @@ def handle_voice(message):
             f.write(downloaded_file)
 
         # Ses dosyasını transkript et
-        model = whisper.load_model("tiny")
+        model = whisper.load_model("small")
         result = model.transcribe(os.path.join(DOWNLOAD_PATH, file_name))
         text = result["text"]
 
@@ -72,7 +71,7 @@ def handle_voice(message):
         sent_message = bot.send_message(chat_id=message.chat.id, text=f"Transkript işlemi %{0} tamamlandı.")
         for i in range(1, 101):
             bot.edit_message_text(chat_id=message.chat.id, message_id=sent_message.message_id, text=f"Transkript işlemi %{i} tamamlandı.")
-            time.sleep(5)  # Her bir istek arasına 0 saniye bekleme süresi ekleyin
+            time.sleep(1)  # Her bir istek arasına 0 saniye bekleme süresi ekleyin
 
         # Sonuçları kullanıcıya gönder
         bot.send_message(chat_id=message.chat.id, text=f"Transkript: {text}")
