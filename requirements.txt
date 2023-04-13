@@ -1,3 +1,2 @@
 ffmpeg
-time
 openai-whisper
