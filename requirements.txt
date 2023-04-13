@@ -1,5 +1,4 @@
 ffmpeg
-os
 random
 time
 openai-whisper
