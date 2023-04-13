@@ -4,7 +4,7 @@ import telebot
 import whisper
 import time
 
-TOKEN = "5691595236:AAEGx_WkQJmA8kKjz4fnypqn-kZMZximHQ0"  # Telegram bot tokeninizi buraya girin
+TOKEN = "5691595236:AAGZU-8DBD6StFoPI_kCH8qU4YEqAlX6GAQ"  # Telegram bot tokeninizi buraya girin
 DOWNLOAD_PATH = "voice/"  # Ses dosyalarının indirileceği klasör yolunu buraya girin
 
 bot = telebot.TeleBot(TOKEN)
